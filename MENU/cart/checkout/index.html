@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../SRC/Icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../DIST/CSS/app.css">
+    <link rel="shortcut icon" href="../../../SRC/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="w-full shadow-md">
+        <div class="flex items-center justify-center p-5">
+            <a href="../../menu.html"><i class="bi bi-chevron-left text-xl"></i></a>
+            <div class="flex-grow text-center">
+                <h1 class="text-xl font-bold">Order Saya</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="p-5">
+        <!-- MAP -->
+        <div class="mb-7">
+            <h1 class="text-xl font-semibold pt-sans mb-4">Alamat</h1>
+
+            <div class="w-full p-3 shadow-lg flex flex-nowrap">
+
+                <div class="">
+                    <iframe src="../../../SRC/maps.jpeg"></iframe>
+                </div>
+                <div class="">
+                    <h1 class="text-lg font-semibold">Rumah</h1>
+                    <p class="text-gray-300 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Quod, voluptate.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="payment">
+            <h1 class="text-xl font-semibold pt-sans mb-4">Metode Pembayaran</h1>
+
+            <div class="w-full p-3 shadow-lg flex flex-nowrap items-center">
+                <div class="payment-img">
+                    <img src="../../../SRC/Bank BRI.png" class="payment-img">
+                </div>
+                <div class="flex-grow">
+                    <h1 class="text-lg font-semibold">Bank BRI</h1>
+                    <p class="text-gray-300 text-sm">1234567890</p>
+                </div>
+                <div>
+                    <button><i class="bi bi-chevron-right text-xl"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-7">
+            <table class="w-full">
+                <tbody class="border-b border-gray-700">
+                    <tr>
+                        <td>Total Harga</td>
+                        <td>Rp20.000</td>
+                    </tr>
+                    <tr>
+                        <td>Ongkos Kirim</td>
+                        <td>Rp2.000</td>
+                    </tr>
+                    <tr>
+                        <td>Pajak</td>
+                        <td>Rp5.000</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr class="font-semibold">
+                        <td>Total</td>
+                        <td>Rp27.000</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="p-5 border-2 border-green-500 border-dashed rounded-md mb-5">
+            <input type="text" placeholder="Tambahkan Kupan" class="mx-auto w-full text-center">
+        </div>
+
+        <div class="mt-7 mb-5">
+            <button class="w-full bg-brand p-3 rounded-md text-white">Bayar</button>
+        </div>
+    </main>
+
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d701.1058988577133!2d106.76484988488161!3d-6.256653942235739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1627558919197!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+
+
+    <script>
+        const payment = document.getElementById("payment");
+        payment.style.cursor = "pointer";
+        payment.onclick = function () {
+            window.open("../checkout/payment/index.html", "_parent")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../SRC/Icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../DIST/CSS/app.css">
+    <link rel="shortcut icon" href="../SRC/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <main class="container">
+        <div class="w-full h-full flex justify-center items-center">
+            <div class="w-full p-5">
+                <h1 class="text-3xl font-bold pt-sans mb-7">LOGIN</h1>
+
+                <form action="#" autocomplete="off" aria-required="true">
+                    <fieldset class="border border-gray-300 p-3 rounded-md relative">
+                        <legend>E-Mail :</legend>
+
+                        <div>
+                            <input type="email" placeholder="E-Mail anda" class="w-full" required>
+                        </div>
+                    </fieldset>
+                    <fieldset class="border border-gray-300 p-3 rounded-md mt-3 relative">
+                        <legend>Password</legend>
+
+                        <div class="flex flex-nowrap">
+                            <input type="password" id="user-pass" class="w-full" placeholder="Masukkan password..."
+                                required>
+                            <button type="button" id="eye-btn"><i class="bi bi-eye ml-2 text-xl"></i></button>
+                        </div>
+                    </fieldset>
+
+                    <div class="flex flex-wrap justify-center">
+                        <button type="submit" class="w-full bg-brand p-3 text-white rounded-md mt-10">Login</button>
+
+                        <div class="mt-5">
+                            <a href="../REGISTER/" class="mx-3 border-r-2 border-gray-600 pr-2">Daftar Sekarang</a>
+                            <a href="#" id="forgot-btn">Lupa Password</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="absolute top-5 right-5">
+                <!-- sign with google -->
+                <button class="p-3 px-5 bg-white shadow-md rounded-lg flex items-center">
+                    Sign with <i class="bi bi-google-lg mx-2"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- VALIDATION ALERT -->
+        <div class="bg-red-500 alert hidden text-white font-semibold">
+            <div>
+                Maaf E-Mail yang anda masukkan salah!
+            </div>
+        </div>
+
+        <div class="bg-red-500 alert hidden text-white font-semibold">
+            <div>
+                Maaf Password yang anda masukkan salah!
+            </div>
+        </div>
+
+        <!-- FORGOT PASSWORD MODALS -->
+        <div class="alert bg-white shadow-lg text-center forgot" id="forgot">
+            <form action="#" autocomplete="off" aria-required="true">
+                <h1 class="text-xl pt-sans my-4">Gunakan email dengan benar untuk mengubah password anda!</h1>
+                <input type="email" id="forgot-pass" required class="w-full border border-gray-500 p-3 rounded-lg">
+
+                <button type="submit" class="p-3 w-full bg-brand text-white rounded-lg mt-5">Kirim</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

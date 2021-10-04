@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Order</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../SRC/Icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../DIST/CSS/app.css">
+    <link rel="shortcut icon" href="../../SRC/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="w-full shadow-md">
+        <div class="flex items-center justify-center p-5">
+            <a href="../menu.html"><i class="bi bi-chevron-left text-xl"></i></a>
+            <div class="flex-grow text-center">
+                <h1 class="text-xl font-bold">Track Order</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-full  h-full flex justify-center p-5">
+        <div class="w-full">
+            <div class="mb-7">
+                <h1 class="pt-sans text-2xl font-semibold capitalize">nomor pesanan</h1>
+                <p class="pt-sans capitalize">nomor pesanan digunakan untuk melacak pesanan anda!</p>
+            </div>
+            <form action="#" aria-required="true">
+                <div class="flex flex-col mb-3">
+                    <label for="no-resi" class="mb-2">Nomor Pesanan</label>
+                    <input type="number" name="number" required id="no-order"
+                        class="border border-gray-600 p-2 rounded-md">
+                </div>
+
+                <div class="flex flex-col mb-3">
+                    <label for="no-resi" class="mb-2">Captcha</label>
+                    <div id="captcha-key">
+                        <!-- Captcha Otomatis -->
+                        123aBc
+                    </div>
+                    <input type="text" name="text" required id="captcha" class="border border-gray-600 p-2 rounded-md">
+                </div>
+
+                <div class="mt-5">
+                    <button class="w-full p-3 bg-brand text-white rounded-md" id="tracking-btn">Lacak</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="validasi.js"></script>
+</body>
+
+</html>
